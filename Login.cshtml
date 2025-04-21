@@ -1,0 +1,16 @@
+@model UserModel
+
+<form method="post">
+    <label>Username:</label>
+    <input type="text" name="Username" value="@Html.Encode(Model.Username)" />
+
+    <label>Password:</label>
+    <input type="password" name="Password" />
+
+    <button type="submit">Login</button>
+</form>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert">@Html.Encode(ViewBag.ErrorMessage)</div>
+}
